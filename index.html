@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirecționare la joc...</h1>
+  <p>Dați sugestii</p>
+  <p>Acest joc nu este deținut de mine.</p>
+  <p><a id="redirectLink" href="#">click here</a>.</p>
+
+  <script>
+    // ===== CONFIGURATION =====
+    const targetURL = "https://www.roblox.com/games/109913649068014/";
+    const delaySeconds = 4;                   // <-- change this to your delay (in seconds)
+    // ==========================
+
+    document.getElementById("redirectLink").href = targetURL;
+
+    setTimeout(() => {
+      window.location.href = targetURL;
+    }, delaySeconds * 1000);
+  </script>
+</body>
+</html>
